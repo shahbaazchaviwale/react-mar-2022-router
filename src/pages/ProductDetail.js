@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 
@@ -7,6 +8,7 @@ const ProductDetail = () => {
     return <section>
         <h3>Prduct Details</h3>
         <p>{param.productId}</p>
+        <span><Link to="/products">Back</Link></span>
     </section>
 }
 
