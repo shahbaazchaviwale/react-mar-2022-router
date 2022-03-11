@@ -1,9 +1,10 @@
+import { Redirect } from "react-router-dom";
 import { Switch } from "react-router-dom";
 import { Route } from "react-router-dom";
 import MainHeader from "./Components/MainHeader";
 import ProductDetail from "./pages/ProductDetail";
 import Products from "./pages/Products";
-import Welcome from "./pages/Welcom";
+import Welcome from "./pages/Welcome";
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       <MainHeader />
       <main>
         <Switch>
+          <Route path="/" exact>
+            <Redirect to="/welcome" />
+          </Route>
           <Route path="/welcome">
             <Welcome />
           </Route>
